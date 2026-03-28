@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nike Run Swift - Product Detail</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        'apex-bg': '#EBEBEB',
+                        'apex-card': '#FFFFFF',
+                        'apex-accent': '#000000',
+                        'apex-muted': '#6B7280',
+                        'apex-star': '#059669',
+                    },
+                    borderRadius: {
+                        'apex': '4px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-apex-bg font-sans text-black min-h-screen flex overflow-hidden">
+
+    <aside class="w-20 bg-white border-r border-gray-200 flex flex-col items-center py-8 justify-between shrink-0"
+        data-purpose="navigation-sidebar">
+        <div class="flex flex-col items-center space-y-12">
+            <div class="w-10 h-10 flex items-center justify-center">
+                <svg class="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M19 6h-2V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm10 16H5V8h2v2h2V8h6v2h2V8h2v12z">
+                    </path>
+                </svg>
+            </div>
+            <nav class="flex flex-col space-y-8">
+                <button class="p-2 hover:bg-gray-100 rounded-apex transition-colors">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"></path>
+                    </svg>
+                </button>
+                <button class="p-3 bg-black text-white rounded-apex transition-colors shadow-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </button>
+                <button class="p-2 hover:bg-gray-100 rounded-apex transition-colors">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+        <button class="w-10 h-10 bg-red-500 rounded-apex flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+        </button>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto no-scrollbar px-12 py-8 relative">
+        <header class="mb-8">
+            <button class="flex items-center text-gray-700 hover:text-black transition-colors font-medium">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+                Back
+            </button>
+        </header>
+
+        <div class="max-w-5xl mx-auto">
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16" data-purpose="product-intro">
+                <div
+                    class="bg-white rounded-apex p-4 aspect-square flex items-center justify-center shadow-sm overflow-hidden border border-gray-100">
+                    <img alt="Nike Run Swift White" class="w-full h-full object-contain"
+                        src="https://lh3.googleusercontent.com/aida/ADBb0uibLyRQMRyTXwm8CL9rvEKZFLdXkJ1bsAKvMh13EhAisfpagSk0XqXq-mUEIONlRtG4SYVSR-e2BAY-nDFFYkPgCuDzQ0_3T-5x5PAJD0CGDJ2DoAhb-uZnHHSP9lg7GzWMw3Jv-iNBgUM8PEkejb0FAtF6KHg37jEuCeOpFHzBr4xfzaWqAtwNgekejskO-ySSIn2DcofXtg-0Ldyop3dNL6DhwZ9lWwWEBZLoytcXTDdbJqd5hc3xK3cKQt60RCxg1BN7qxdW-l4" />
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-6xl font-extrabold tracking-tight mb-2">Nike Run Swift</h1>
+                    <p class="text-3xl text-gray-400 font-semibold mb-6">Series 5 SE</p>
+                    <div class="flex items-center space-x-1 mb-8">
+                        <div class="flex text-apex-star">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="text-emerald-700 font-bold ml-2">4.5 / 5</span>
+                    </div>
+                    <div class="text-4xl font-bold mb-6">$ 529.99</div>
+                    <p class="text-gray-700 leading-relaxed mb-8 max-w-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque tellus imperdiet
+                        mattis. Proin in quis ipsum non amet imperdiet. Dignissim nisi leo a at. Sit nec lacus, nunc
+                        volutpat, tincidunt lorem mi duis. Vitae elementum libero.
+                    </p>
+                    <div class="mt-auto">
+                        <button
+                            class="bg-black text-white px-8 py-3 rounded-apex flex items-center hover:bg-zinc-800 transition-all shadow-lg active:scale-95">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-gray-300 mb-12" />
+
+            <section class="pb-24" data-purpose="detailed-description">
+                <h2 class="text-4xl font-bold mb-8">Description</h2>
+                <div class="text-gray-600 space-y-6 text-lg leading-relaxed max-w-4xl">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim odio faucibus nec malesuada
+                        purus volutpat vel sed viverra. Id sagittis, phasellus dui in arcu.</p>
+                    <p>Orci vel ridiculus diam viverra. Libero malesuada orci, quis placerat suscipit augue imperdiet.
+                        Et praesent augue dictum mauris eget lacus malesuada.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <aside class="w-80 bg-white border-l border-gray-200 flex flex-col py-12 px-8 overflow-y-auto no-scrollbar shrink-0"
+        data-purpose="bag-sidebar">
+        <div class="flex-1">
+            <h2 class="text-5xl font-extrabold text-center mb-12">Bag</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div
+                    class="aspect-square bg-gray-50 rounded-apex border border-gray-100 flex items-center justify-center p-2 relative group cursor-pointer hover:border-black transition-colors shadow-sm">
+                    <img alt="Item 1" class="w-full h-full object-contain"
+                        src="https://lh3.googleusercontent.com/aida/ADBb0uibLyRQMRyTXwm8CL9rvEKZFLdXkJ1bsAKvMh13EhAisfpagSk0XqXq-mUEIONlRtG4SYVSR-e2BAY-nDFFYkPgCuDzQ0_3T-5x5PAJD0CGDJ2DoAhb-uZnHHSP9lg7GzWMw3Jv-iNBgUM8PEkejb0FAtF6KHg37jEuCeOpFHzBr4xfzaWqAtwNgekejskO-ySSIn2DcofXtg-0Ldyop3dNL6DhwZ9lWwWEBZLoytcXTDdbJqd5hc3xK3cKQt60RCxg1BN7qxdW-l4" />
+                </div>
+                <div
+                    class="aspect-square bg-gray-50 rounded-apex border border-gray-100 flex items-center justify-center p-2 relative group cursor-pointer hover:border-black transition-colors shadow-sm">
+                    <img alt="Item 2" class="w-full h-full object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOtjHeyoYYqGTN34r8vKCfzcprb88nSERcwu3ir1qm7qzWlQ2ijy_zSF5TVWlQhjBWU2KSXjTfoRHoFFN6o7n0P8Kfu5Dz9IYhoka5vLBaxADSarRQ0Ht9dXa9pKCrT0mGHyd_HO7lJiNCYaEOYYx_3WmLnt4_9BoSoX9yZa79VUUOdlSwJfDGxPWLxk64HvF0FWHJ5PSnh4DgW9J0MG1evHLdNBt0LAoqX-wFGXgICHzjpN045zM6NfZQ_HIMO0dePErOkUP2vBPW" />
+                </div>
+                <div
+                    class="aspect-square bg-gray-50 rounded-apex border border-gray-100 flex items-center justify-center p-2 relative group cursor-pointer hover:border-black transition-colors shadow-sm">
+                    <img alt="Item 3" class="w-full h-full object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0hK7N1sbLk323AaaajHl5QdrIbZ_stsV6J1bYRd_I3dFXQnCnX80eTT3rPhidVntI3_rod6Q0NmEqvBCL7V0exMK6_WrZPqhl1M0_IRehqFptLhhV0nn_6mRMSHUk05K0bkUuCvEELP7mK0l2DbzdrRhU0URMS3zeJPobHvhZ-WeElrX99FyAUofMWWHzybEIIzyC79R9vvEUthMm9r-4PPymH-KjSNFq7azp19SzeLVw1vH_G7Dfi-Rlkt9jNDtteJVUy-wE3FeE" />
+                </div>
+                <div
+                    class="aspect-square bg-gray-50 rounded-apex border border-gray-100 flex items-center justify-center p-2 relative group cursor-pointer hover:border-black transition-colors shadow-sm">
+                    <img alt="Item 4" class="w-full h-full object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5N83Hfm-dn1Afdv9V-IU4tQWdOGvsHR2Ux-WLjKV9PnbvlBYpysZSQOrNbi8f8YkUUDR0JURx_ZYtXNKJhSyYfNYIN_SbRsFkw9QSa-mjvo9a_SbEWI8Nlb5NNgHsu2irASbxNn8ojUObhu7L5bIHT1_moMnyUoMjgPktygvXVoqTXlyyNqQESVCrMyU-ygkHGWVgIFi-lQr98uJy15LnYUJEjilCE63mWB_yqQJF7IsAmw288L2TiZ-LUblGR26EAvZcoGu3tSzN" />
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 flex justify-center">
+            <button
+                class="bg-zinc-900 text-white px-8 py-3 rounded-apex flex items-center hover:bg-black transition-all shadow-xl active:scale-95">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"></path>
+                </svg>
+                View Bag
+            </button>
+        </div>
+    </aside>
+
+</body>
+
+</html>

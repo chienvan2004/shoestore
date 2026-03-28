@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Payment Selection & Addition</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="Add-Payment.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4">
+    <main class="w-full max-w-2xl space-y-6">
+        <section class="bg-white rounded-[2rem] p-10 shadow-sm border border-gray-100"
+            data-purpose="existing-cards-container">
+            <h2 class="text-2xl font-semibold text-gray-800 tracking-widest-header mb-8">SELECT A CARD</h2>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4 text-gray-500 hover:text-gray-800 cursor-pointer transition-colors">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    <span class="text-lg font-medium">MasterCard ending in 4242</span>
+                </div>
+                <div class="flex items-center gap-4 text-gray-500 hover:text-gray-800 cursor-pointer transition-colors">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    <span class="text-lg font-medium">VISA Debit ending in 2894</span>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white rounded-[2rem] p-10 shadow-sm border border-gray-100"
+            data-purpose="add-card-form-container">
+            <h2 class="text-2xl font-semibold text-gray-800 tracking-widest-header mb-8">ADD A NEW CARD</h2>
+            <form action="#" class="space-y-6" method="POST">
+                <div data-purpose="field-group">
+                    <label class="input-label" for="cardholder-name">Cardholder Name</label>
+                    <input class="custom-input" id="cardholder-name" name="cardholder-name" placeholder="John Maker"
+                        required="" type="text" />
+                </div>
+                <div data-purpose="field-group">
+                    <label class="input-label" for="card-number">Card Number</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <input class="custom-input pl-12" id="card-number" name="card-number"
+                            placeholder="5126-5987-2214-7621" required="" type="text" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div data-purpose="field-group">
+                        <label class="input-label" for="expiry-date">Expiry Date</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <input class="custom-input pl-12" id="expiry-date" name="expiry-date"
+                                placeholder="MM / YYYY" required="" type="text" />
+                        </div>
+                    </div>
+                    <div data-purpose="field-group">
+                        <label class="input-label" for="cvc">CVC</label>
+                        <input class="custom-input" id="cvc" name="cvc" placeholder="123" required="" type="text" />
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 pt-2">
+                    <input checked="" class="custom-checkbox" id="default-method" name="default-method"
+                        type="checkbox" />
+                    <label class="text-gray-700 font-medium text-lg" for="default-method">Save this as your default
+                        payment method</label>
+                </div>
+                <div class="pt-6">
+                    <button
+                        class="w-full bg-[#1a1f16] hover:bg-black text-white py-5 rounded-2xl flex items-center justify-center gap-3 transition-all duration-200"
+                        type="submit">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <span class="text-xl font-medium">Add Payment Method</span>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between pt-8">
+                    <button class="text-gray-600 hover:text-black font-medium text-lg" type="button">Back</button>
+                    <div class="flex items-center space-x-2 text-teal-500 font-medium text-lg"
+                        data-purpose="security-indicator">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                        <span>Secure Connection</span>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

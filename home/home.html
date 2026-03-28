@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nike Store Interface</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body class="bg-[#f0f0f0] h-screen overflow-hidden flex">
+    <aside class="w-16 bg-white border-r border-gray-200 flex flex-col items-center py-6 justify-between h-full"
+        data-purpose="main-sidebar">
+        <nav class="flex flex-col space-y-8 items-center">
+            <div class="p-2 bg-[#00df82] rounded-lg text-white">
+                <i class="w-6 h-6" data-lucide="layout-grid"></i>
+            </div>
+            <button class="text-gray-400 hover:text-black transition-colors">
+                <i class="w-6 h-6" data-lucide="menu"></i>
+            </button>
+            <button class="p-2 bg-black text-white rounded-lg">
+                <i class="w-6 h-6" data-lucide="store"></i>
+            </button>
+            <button class="text-gray-400 hover:text-black transition-colors">
+                <i class="w-6 h-6" data-lucide="shopping-bag"></i>
+            </button>
+        </nav>
+        <button class="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+            <i class="w-6 h-6" data-lucide="log-out"></i>
+        </button>
+    </aside>
+    <main class="flex-1 overflow-y-auto px-10 py-8" data-purpose="product-gallery">
+        <header class="max-w-xl mx-auto mb-12">
+            <div class="relative group">
+                <label class="block text-xs font-medium text-gray-400 mb-1 ml-1 uppercase tracking-wider"
+                    for="search">Search Item</label>
+                <input
+                    class="w-full h-12 bg-white border-2  rounded-lg px-4 focus:ring-0 focus:border-blue-500 transition-all outline-none shadow-sm"
+                    id="search" placeholder="Search for your favorite kicks..." type="text" />
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 border-2  p-6 rounded-xl">
+            <article class="product-card flex flex-col" data-purpose="product-item">
+                <div class="bg-white rounded-2xl p-4 mb-3 aspect-square flex items-center justify-center shadow-sm">
+                    <img alt="Nike Vapor" class="w-full h-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuASgAg4O2Ibv2MUkkR0_kBfQwucEtIxotXzKd7YaK87_jIdBgPJm6xw68rIDD2jkQaJZSgW5x21Na9XEB9WJEbT9j8aU-gSK0aQ3Pec74kckGcY8HmFj6TuVSPFYO__5kQ0_Zd77OPjDc_7gE0NfMT63avdcRBfJK6E4ocd8PZ5sI-nVh0nQe4h32dhzbytBp4VCpNrBp5oyqTlLqzCi9VKUUnunivYAvSr0n05TTTKGfayLYEH-5TVTZhpn-56piWTm7hMxZY3GqFm" />
+                </div>
+                <div class="px-1 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-800">Nike Vapor</h3>
+                        <p class="text-gray-600 mt-1">$ 529.99</p>
+                    </div>
+                    <button class="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card flex flex-col" data-purpose="product-item">
+                <div class="bg-white rounded-2xl p-4 mb-3 aspect-square flex items-center justify-center shadow-sm">
+                    <img alt="Nike MC Trainer" class="w-full h-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVeP1wQ3UAkl4I5aCFe_fPNo-iHWzF-TtDsJel2_MAMBaC5q_vCHKLhheyLB8m6LMjpaOXNVKvkhF7cpjWpRqJBKhw4SwGNaNs1s0yo2ptclSi7SZC7bcs7uOVnGdMfrETJnMb6Rfps5PP-0Uu-TalHwbsnS2k4sWgK5_wRX6oIpe-WgZqxNUTG-6xuRjV-smz68N-xCl52ztDlmt9Mpq8j8igwX8KnqIiArvRXSULLLoD1BMdIyJd7NctLl-WtGrxo6UMYnhPbNnf" />
+                </div>
+                <div class="px-1 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-800">Nike MC Trainer</h3>
+                        <p class="text-gray-600 mt-1">$ 39.99</p>
+                    </div>
+                    <button class="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card flex flex-col" data-purpose="product-item">
+                <div class="bg-white rounded-2xl p-4 mb-3 aspect-square flex items-center justify-center shadow-sm">
+                    <img alt="Nike Winflo 11" class="w-full h-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdNe75zLif_6s6U2_l_bU2awxZFh3foiBAJGG0fZi0o5jZK-mJCDXjfU4ZUw9OqcQSAEOASo85GNtEpjYztTJIBKgmLtFnqhJqj4GtAjKUw51u1tzBHw7UiL7IZVK1j3ahGEsoLTw__xm37aX3bdUL85RAG88E4c1TTNn1GWqviPBKiD3AtTccXCRsgSanrMnmugIlul9YrM8oLGIpjrUs759DOCN3GyDWodOfgGRdiOloaF65dWobAOZHkP_R-SNt77phjJJ9z4eP" />
+                </div>
+                <div class="px-1 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-800">Nike Winflo 11</h3>
+                        <p class="text-gray-600 mt-1">$ 619.99</p>
+                    </div>
+                    <button class="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card flex flex-col" data-purpose="product-item">
+                <div class="bg-white rounded-2xl p-4 mb-3 aspect-square flex items-center justify-center shadow-sm">
+                    <img alt="Nike Juniper Trail 3" class="w-full h-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB06mNw6JxWY7EPUQaOxwHEnPD3erzstTZDAy0MNTVauSNB20vyPe6UWrhzmVmxnuH22NbNS-RVtQShIhn1NMAf24jSEsq8vmfXn36ApCGlxaTYsVZmmPY7ZNT7Rf9MsB_J-HticVGw5CeONwUrom2VVOBCM7apSZorUxpWOZiDtq9SytSh56GkDKspFCAKNxrC6BSvQrZKjahMr8Ib3_A1K2o2CEFe6ehefjPjgzHdJemSTWSJvYhoWtWKQ2NVzk1K6_zr8c5vp9PU" />
+                </div>
+                <div class="px-1 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-800">Nike Juniper Trail 3</h3>
+                        <p class="text-gray-600 mt-1">$ 619.99</p>
+                    </div>
+                    <button class="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card flex flex-col col-span-1 md:col-span-2" data-purpose="featured-product-item">
+                <div class="bg-white rounded-2xl p-6 mb-3 h-64 flex items-center justify-center shadow-sm">
+                    <img alt="Nike Pegasus" class="h-full w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWciIE3ICbxXhIJMG-LYViDTCc4osPlhF8XC14YrOSrXYr6Rt9WcQwLD-ETl1EM2SnP0AWUKzu_dDjRTGRCzepOuizfCJBoo0Gxln_Ellj4ya4bCEbQTrDXpBYgeDvZWb6AS65BU0T90oZcifbsyQv1J4HHwONqqW8YaQVAbE-MkXw3Adbtc6Ynor3B3uiP6tnRFNzGIXTaphsO8FTeRZoX5B0rityDf4HO0v-JvTb_6M9HLO5X5Gs3kYPfXR_bG3LdvvFHv_mVPKz" />
+                </div>
+                <div class="px-1 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-800">Nike Pegasus</h3>
+                        <p class="text-gray-600 mt-1">$ 3249.99</p>
+                    </div>
+                    <button class="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card flex flex-col" data-purpose="product-item">
+                <div class="bg-white rounded-2xl p-4 mb-3 aspect-square flex items-center justify-center shadow-sm">
+                    <img alt="Nike Court Vision Low" class="w-full h-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXj4Ik4yvfxlFeKppUwo2QpdTteiFLZfE7zy5OcZGsg-YE5eKJYRufml_fZZNsFyM-poPdJq9rsK6DPj1USCFTfxFftxY4toEDZP0LKQHAsvQOHA6DUQbJWlEBU-ak-UWhMet6kLtiOmsm106bJGujYhNv_xKpkLabXQpAfjECiP1bwNGiuEe8sUJ3zJK36u7e9qLceusMK-36FxAzJOJrrE7AVJmxyddNXRjoMGcc9bVa9QnaKxrwkBV9kzJ4sdbclNh5uXzI03CF" />
+                </div>
+                <div class="px-1 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-800">Nike Court Vision Low</h3>
+                        <p class="text-gray-600 mt-1">$ 619.99</p>
+                    </div>
+                    <button class="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card flex flex-col" data-purpose="product-item">
+                <div class="bg-white rounded-2xl p-4 mb-3 aspect-square flex items-center justify-center shadow-sm">
+                    <img alt="Nike Run Swift" class="w-full h-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvJOZjyWneTkotWeKxjye7prGxKCjDHJQRbZAEaisoXi5aEESX-PMDogzPEoOdjPCECe39V38zEamm64bmQp3cJuOleOpsd45ieOe12pwNq2ks1mIZyNZyxwibD7330_bK7Rtn9lvLcVJ6PFWXRlfCRyM9Uy3_zT_LVx1uqD85thO2kwaLekBveGmhwnpVcLxKJHZHH4QawHKXNIh7b6ttfCHy6W0DiHCHzIOWZgk9p8l7nm00CuoXAVC4_UUfNVECoxxgdTq5BhzQ" />
+                </div>
+                <div class="px-1 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-800">Nike Run Swift</h3>
+                        <p class="text-gray-600 mt-1">$ 619.99</p>
+                    </div>
+                    <button class="bg-black text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                    </button>
+                </div>
+            </article>
+        </div>
+    </main>
+    <aside class="relative w-80 bg-white border-l border-gray-200 flex flex-col items-center py-12 px-6 shadow-xl"
+        data-purpose="shopping-bag-sidebar">
+        <div class="sidebar-divider"></div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-10">Bag</h2>
+        <div class="grid grid-cols-3 gap-3 w-full mb-10">
+            <div
+                class="bg-gray-100 rounded-lg p-2 aspect-square flex items-center justify-center border border-gray-200">
+                <img alt="Vapor Thumbnail" class="max-w-full max-h-full mix-blend-multiply object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASgAg4O2Ibv2MUkkR0_kBfQwucEtIxotXzKd7YaK87_jIdBgPJm6xw68rIDD2jkQaJZSgW5x21Na9XEB9WJEbT9j8aU-gSK0aQ3Pec74kckGcY8HmFj6TuVSPFYO__5kQ0_Zd77OPjDc_7gE0NfMT63avdcRBfJK6E4ocd8PZ5sI-nVh0nQe4h32dhzbytBp4VCpNrBp5oyqTlLqzCi9VKUUnunivYAvSr0n05TTTKGfayLYEH-5TVTZhpn-56piWTm7hMxZY3GqFm" />
+            </div>
+            <div
+                class="bg-gray-100 rounded-lg p-2 aspect-square flex items-center justify-center border border-gray-200">
+                <img alt="MC Trainer Thumbnail" class="max-w-full max-h-full mix-blend-multiply object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVeP1wQ3UAkl4I5aCFe_fPNo-iHWzF-TtDsJel2_MAMBaC5q_vCHKLhheyLB8m6LMjpaOXNVKvkhF7cpjWpRqJBKhw4SwGNaNs1s0yo2ptclSi7SZC7bcs7uOVnGdMfrETJnMb6Rfps5PP-0Uu-TalHwbsnS2k4sWgK5_wRX6oIpe-WgZqxNUTG-6xuRjV-smz68N-xCl52ztDlmt9Mpq8j8igwX8KnqIiArvRXSULLLoD1BMdIyJd7NctLl-WtGrxo6UMYnhPbNnf" />
+            </div>
+            <div
+                class="bg-gray-100 rounded-lg p-2 aspect-square flex items-center justify-center border border-gray-200">
+                <img alt="Winflo Thumbnail" class="max-w-full max-h-full mix-blend-multiply object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdNe75zLif_6s6U2_l_bU2awxZFh3foiBAJGG0fZi0o5jZK-mJCDXjfU4ZUw9OqcQSAEOASo85GNtEpjYztTJIBKgmLtFnqhJqj4GtAjKUw51u1tzBHw7UiL7IZVK1j3ahGEsoLTw__xm37aX3bdUL85RAG88E4c1TTNn1GWqviPBKiD3AtTccXCRsgSanrMnmugIlul9YrM8oLGIpjrUs759DOCN3GyDWodOfgGRdiOloaF65dWobAOZHkP_R-SNt77phjJJ9z4eP" />
+            </div>
+            <div
+                class="bg-gray-100 rounded-lg p-2 aspect-square flex items-center justify-center border border-gray-200">
+                <img alt="Pegasus Thumbnail" class="max-w-full max-h-full mix-blend-multiply object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWciIE3ICbxXhIJMG-LYViDTCc4osPlhF8XC14YrOSrXYr6Rt9WcQwLD-ETl1EM2SnP0AWUKzu_dDjRTGRCzepOuizfCJBoo0Gxln_Ellj4ya4bCEbQTrDXpBYgeDvZWb6AS65BU0T90oZcifbsyQv1J4HHwONqqW8YaQVAbE-MkXw3Adbtc6Ynor3B3uiP6tnRFNzGIXTaphsO8FTeRZoX5B0rityDf4HO0v-JvTb_6M9HLO5X5Gs3kYPfXR_bG3LdvvFHv_mVPKz" />
+            </div>
+        </div>
+        <button
+            class="flex items-center space-x-2 bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-all transform hover:scale-105 shadow-md">
+            <i class="w-5 h-5" data-lucide="shopping-bag"></i>
+            <span class="font-medium">View Bag</span>
+        </button>
+    </aside>
+    <script data-purpose="icon-initialization">
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Check Your Bag Items</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="bag.css">
+</head>
+
+<body class="bg-[#EAEAEA] h-screen overflow-hidden flex">
+    <nav class="w-20 bg-white h-full flex flex-col items-center py-8 justify-between border-r border-gray-200"
+        data-purpose="main-navigation">
+        <div class="flex flex-col gap-10 items-center">
+            <div class="p-2 bg-[#26D07C] rounded-lg text-white">
+                <i class="w-6 h-6" data-lucide="layout-grid"></i>
+            </div>
+            <div class="flex flex-col gap-8 text-gray-400">
+                <button class="hover:text-black transition-colors"><i class="w-6 h-6" data-lucide="menu"></i></button>
+                <button class="hover:text-black transition-colors"><i class="w-6 h-6" data-lucide="home"></i></button>
+                <button class="bg-black text-white p-2 rounded-lg"><i class="w-6 h-6"
+                        data-lucide="shopping-bag"></i></button>
+            </div>
+        </div>
+        <button class="bg-[#EF4444] text-white p-2 rounded-lg">
+            <i class="w-6 h-6" data-lucide="log-out"></i>
+        </button>
+    </nav>
+    <main class="flex-1 flex flex-row overflow-hidden" data-purpose="shopping-interface">
+        <section class="flex-1 overflow-y-auto p-12 custom-scrollbar" data-purpose="product-list-container">
+            <h1 class="text-4xl font-semibold text-[#1A1A1A] mb-10">Check your Bag Items</h1>
+            <div class="flex flex-col gap-6">
+                <article class="bg-white rounded-3xl p-6 flex gap-8 shadow-sm" data-purpose="product-card">
+                    <div class="w-48 h-48 bg-[#F3F3F3] rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img alt="Nike Run Swift" class="w-full h-auto object-contain"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDbL4zbQhIQXB6a2N0WQUeMJfAS3pKsVLY0tr28vEUkfmL5bVuQFOfja9C21_knj42ouXDGLxl01MhdpXvetyTscO8j8HTleLgxxC0ggY2Hlrkx8BEvkVNOMPS7yhrRT3VTE55T_lqA7GZ7BSglM_dz9cYEVmWuTAeZENFZ8sr5KEB3LbNALyhxUagNyqxnEeNd63Safx4tuDNn0Tw8lHiRxAqbF5iliYfhItlrMgyoSYZHCrHCxdg_J239sl-4gLWBCxP_qJ44wD" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-2">
+                        <div>
+                            <h2 class="text-2xl font-bold text-[#1A1A1A]">Nike Run Swift</h2>
+                            <p class="text-gray-500 mt-2 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit ut aliquam</p>
+                            <div class="flex items-center gap-1 mt-4">
+                                <div class="flex text-[#00875A]">
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5" data-lucide="star"></i>
+                                </div>
+                                <span class="text-[#00875A] font-semibold ml-2">4.5 / 5</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div class="text-xl font-medium">
+                                $ 1799.99 <span class="text-gray-400 font-normal ml-2">x 1</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-gray-50 px-4 py-2 rounded-xl">
+                                <button class="text-red-500 hover:bg-red-50 p-1 rounded"><i class="w-5 h-5"
+                                        data-lucide="minus"></i></button>
+                                <span class="font-bold text-lg w-4 text-center">1</span>
+                                <button class="text-[#26D07C] hover:bg-green-50 p-1 rounded"><i class="w-5 h-5"
+                                        data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-3xl p-6 flex gap-8 shadow-sm" data-purpose="product-card">
+                    <div class="w-48 h-48 bg-[#F3F3F3] rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img alt="Nike Pegasus" class="w-full h-auto object-contain"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBh0XCislACpHEt7KQihgyxBvF9QgHA0_0dbCde_XS7bEdL6VDPYi9PIVpj-HrtCSfP9tY3pU2RxtcyFHZ4HIVMObvO99nw1owTbtSgHc7vGPhcIP8mdggvEf831WWuoOgCkmGGsCSOHcfEX2EMao8MObA4efOo2piEaparXN20D9pxgRmAizA-9YQR-oSnTlzyUkkm9yQQOIGrBJZ5x1dCiASzUg-j4W24mVUYa5fayG0N5TjRYuZ7EW_O0mjpzIlzpVTB5EIthDz" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-2">
+                        <div>
+                            <h2 class="text-2xl font-bold text-[#1A1A1A]">Nike Pegasus</h2>
+                            <p class="text-gray-500 mt-2 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit ut aliquam</p>
+                            <div class="flex items-center gap-1 mt-4">
+                                <div class="flex text-[#00875A]">
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5" data-lucide="star"></i>
+                                </div>
+                                <span class="text-[#00875A] font-semibold ml-2">4.5 / 5</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div class="text-xl font-medium">
+                                $ 729.99 <span class="text-gray-400 font-normal ml-2">x 3</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-gray-50 px-4 py-2 rounded-xl">
+                                <button class="text-red-500 hover:bg-red-50 p-1 rounded"><i class="w-5 h-5"
+                                        data-lucide="minus"></i></button>
+                                <span class="font-bold text-lg w-4 text-center">3</span>
+                                <button class="text-[#26D07C] hover:bg-green-50 p-1 rounded"><i class="w-5 h-5"
+                                        data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-3xl p-6 flex gap-8 shadow-sm" data-purpose="product-card">
+                    <div class="w-48 h-48 bg-[#F3F3F3] rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img alt="Nike Court Vision Low" class="w-full h-auto object-contain"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF0o-UT3jTLkipTNaOABKoJg0mNTKWiFC8-QSz6QmWGs-2R3dzShCgUCCczU5ltBm7HXIBzvFa_5fBae-8GFG8Rr4VLGg9NWYRnboGabWaKobCIkawJY7GtA3A9Et32iJelzt-hPsoePyyQ76CIRbvN_5uYn99aRYm7WSId7C8IhVzHthP6ciBT32M1rU3O10bsT_ZYgR7nunnOCdNJZCbQWN4PrnVIBlo7GDkUPgtV-6jNZQg9lqDZZNXA7UeZZ7mS2GPInkciDCj" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-2">
+                        <div>
+                            <h2 class="text-2xl font-bold text-[#1A1A1A]">Nike Court Vision Low</h2>
+                            <p class="text-gray-500 mt-2 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit ut aliquam</p>
+                            <div class="flex items-center gap-1 mt-4">
+                                <div class="flex text-[#00875A]">
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5 fill-current" data-lucide="star"></i>
+                                    <i class="w-5 h-5" data-lucide="star"></i>
+                                </div>
+                                <span class="text-[#00875A] font-semibold ml-2">4.5 / 5</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div class="text-xl font-medium">
+                                $ 619.99 <span class="text-gray-400 font-normal ml-2">x 1</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-gray-50 px-4 py-2 rounded-xl">
+                                <button class="text-red-500 hover:bg-red-50 p-1 rounded"><i class="w-5 h-5"
+                                        data-lucide="minus"></i></button>
+                                <span class="font-bold text-lg w-4 text-center">1</span>
+                                <button class="text-[#26D07C] hover:bg-green-50 p-1 rounded"><i class="w-5 h-5"
+                                        data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <aside class="w-80 bg-[#EAEAEA] border-l border-gray-300 p-8 flex flex-col items-center"
+            data-purpose="bag-summary">
+            <h2 class="text-3xl font-bold text-[#1A1A1A] mb-10">Bag</h2>
+            <div class="grid grid-cols-3 gap-3 mb-12 w-full">
+                <div class="aspect-square bg-white rounded-xl flex items-center justify-center p-2 shadow-sm">
+                    <img alt="Bag Item" class="w-full h-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLbnFCIhy9tDINaKQZRvcaN11CG7EbNEUB_UlIhCWAg4FRaCOkboO9FN_kcR_OLphe0rpIrsL5ovKb3U69perrd6kAAuo2uosHR3-shCQ5AvkGqN8iPtN_GdNyZw2eD2PDLWyMKdisLKAXfCl7xdpS0N6KVm9RgRKLOcvHvcN2Flq-UVYz-ywIfEZS3uNY6eWcG-LQ2EST_quObSlR9pvwjDBJr1lhp4JzZxiIe1dJH7JvrWELTLUtFl09RcdmJouNsToQkOqSFfYG" />
+                </div>
+                <div class="aspect-square bg-white rounded-xl flex items-center justify-center p-2 shadow-sm">
+                    <img alt="Bag Item" class="w-full h-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeWLxy2gJGwhe05ubboXy9y3hWFggvQEv6rBI3vob2KSyyYR3FRCime2BzUycAP9OPem4JgZnlv8wzH-S_-Us6T-y_4CO0jV0ji96ricWrsj2m7lSTFJn64_bSIRVYPIQ1DBUsCY1vWoS8hYfBG8Q4Kz9APZMof2QYCFmt0dZ-T-PnrAY56fAH3-CUTF4jSHKK7I8NJFFmws_EmMgL2L18PzSiwGNcw8hZBLg0gClEKQavMK7Smc6aIzHHvb-M3pOTZXJcEDFm_R3v" />
+                </div>
+                <div class="aspect-square bg-white rounded-xl flex items-center justify-center p-2 shadow-sm">
+                    <img alt="Bag Item" class="w-full h-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDUBCfTmi5h3nTMISbZwpf1SqM-r8aIShMfaV9M_HRu_AOEDIrrLSZNiztvaLLZJupqpp-FmBVFHSE4NxwsQ4cmJMXvvy6I9aaBlg7DIe3MU3TaBrapN98M84wee0sKZEfjxDIFgQdmsomALB-TE4hiioq0YHm61Rdh-DjB1f0sYLD4MyuQ6AYvrYBahan8m3_IrGxsh9C4QlqUtpjuSfosOjVmcn7ZyFh2X5PybUKNxOQF4iLvJkMiphkouFv8-_PmD4BOtVS7K2U" />
+                </div>
+                <div class="aspect-square bg-white rounded-xl flex items-center justify-center p-2 shadow-sm">
+                    <img alt="Bag Item" class="w-full h-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFakcDGpKV5LB2W9qujZIHBuSTXk53x63ub5neGzY2frEXGeXc-U5R_ku029AqVOBsRPMKMhUu9boZSpHP8vz1loN_kxUTsbQvMgx2AJEvalsblaXLbbY-WKAAHjLCfyfN5FgPP-XTl5G_K8bTYHdVZd7ERPLlg7RE_SnZAOFPBiyYgqoCjUSag73smgR9i-rIVipKP0F2sUWW_tAHtpWOSjMmH_99xuKWYOgFVn9-a0qKJ2xY29iEmOGeGEP98-AUU2_Tb3mpZC-s" />
+                </div>
+            </div>
+            <div class="text-center mb-8">
+                <p class="text-lg text-gray-600 mb-1">Bag Total:</p>
+                <p class="text-3xl font-bold">$ 5,849.93</p>
+            </div>
+            <button
+                class="w-full bg-[#1A1A1A] text-white py-4 px-6 rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-800 transition-colors shadow-lg">
+                <i class="w-5 h-5" data-lucide="shopping-bag"></i>
+                <span class="font-bold text-lg">Checkout</span>
+            </button>
+        </aside>
+    </main>
+    <script data-purpose="icon-initialization">
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
